@@ -119,17 +119,18 @@ render(){
   const{products,loading}=this.state;
   return (
     <div className="App">
-      <Navbar 
+      <Navbar className="nav-bar"
       count={this.getCount()}
       />
-      <Cart 
+      <h1>My Cart</h1>
+      <Cart className="cart"
       products={products}
       onIncreaseQuantity={this.handleIncreaseQuantity}
       ondecreaseQuantity={this.handledecreaseQuantity}
       ondeleteProduct={this.handledeleteProduct}
       />
       {loading && <h3>Your Products are Loading...</h3>}
-      <div  style={{fontSize:20,padding:20}} >
+      <div  style={{fontSize:25,padding:20,fontFamily:'monospace'}} >
         Total:{this.getTotal()}
       </div>
     </div>
